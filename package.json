@@ -7,7 +7,7 @@
   "module": "my-element.js",
   "type": "module",
   "scripts": {
-    "build": "tsc",
+    "build": "rollup -c",
     "build:watch": "tsc --watch",
     "clean": "rimraf my-element.{d.ts,d.ts.map,js,js.map} test/my-element.{d.ts,d.ts.map,js,js.map} test/my-element_test.{d.ts,d.ts.map,js,js.map}",
     "lint": "npm run lint:lit-analyzer && npm run lint:eslint",
@@ -41,6 +41,7 @@
   "author": "Google LLC",
   "license": "BSD-3-Clause",
   "dependencies": {
+    "@lit/task": "^1.0.0",
     "lit": "^3.0.0"
   },
   "devDependencies": {
