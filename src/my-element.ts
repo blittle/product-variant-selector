@@ -13,7 +13,7 @@ type Product = {
 };
 
 @customElement('product-variant-selector')
-export class MyElement extends LitElement {
+export class ProductVariantSelector extends LitElement {
   static override styles = css`
     :host {
       display: block;
@@ -165,6 +165,6 @@ export class MyElement extends LitElement {
 
 declare global {
   interface HTMLElementTagNameMap {
-    'product-variant-selector': MyElement;
+    'product-variant-selector': ProductVariantSelector;
   }
 }
