@@ -13,13 +13,13 @@
         style="flex: 1"
         type="text"
         id="productUrl"
-        value="https://spanx.ca/products/flare-jeans-white.json"
+        value="https://ca.roborock.com/products/roborock-s8-pro-ultra"
       />
       <button>Render</button>
     </form>
     <hr />
     <product-variant-selector
-      productUrl="https://spanx.ca/products/flare-jeans-white.json"
+      productUrl="https://ca.roborock.com/products/roborock-s8-pro-ultra.json"
     ></product-variant-selector>
     <script>
       const form = document.getElementById('form');
@@ -30,7 +30,7 @@
 
       form.addEventListener('submit', (event) => {
         event.preventDefault();
-        productVariantSelector.productUrl = productUrl.value;
+        productVariantSelector.productUrl = productUrl.value + '.json';
       });
     </script>
   </body>

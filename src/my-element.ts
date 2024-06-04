@@ -1,4 +1,5 @@
 import {LitElement, html, css} from 'lit';
+import {html as staticHtml, unsafeStatic} from 'lit/static-html.js';
 import {Task} from '@lit/task';
 import {customElement, property} from 'lit/decorators.js';
 
@@ -107,13 +108,18 @@ export class ProductVariantSelector extends LitElement {
           ${this.renderImage(product)}
           <div>
             <h1>${product.title}</h1>
-            <p class="description">${product.body_html}</p>
+            ${staticHtml`<p class="description">${unsafeStatic(
+              product.body_html
+            )}</p>`}
             <p>${this.renderProductOptions(product)}</p>
             <p>${this.renderBuyNow(product)}</p>
           </div>
         </div>
       `,
-      error: (e) => html`<p>Error: ${e}</p>`,
+      error: (e) => {
+        console.error(`Error fetching product ${this.productUrl}\n${e}`);
+        return html`<span class="error">${e}</span>`;
+      },
     });
   }
 
