@@ -22,7 +22,7 @@ export class ProductVariantSelector extends LitElement {
       border-radius: 8px;
       padding: 16px;
       font-family: Sans-serif;
-      height: 260px;
+      height: 280px;
       width: 460px;
     }
 
@@ -117,7 +117,7 @@ export class ProductVariantSelector extends LitElement {
         </div>
       `,
       error: (e) => {
-        console.error(`Error fetching product ${this.productUrl}\n${e}`);
+        console.error(`Error fetching product "${this.productUrl}"\n${e}`);
         return html`<span class="error">${e}</span>`;
       },
     });

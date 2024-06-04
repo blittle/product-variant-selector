@@ -46,7 +46,7 @@ const ht=Symbol.for(""),ot=t=>{if(t?.r===ht)return t?._$litStatic$},nt=new Map,c
             <p>${this.renderBuyNow(t)}</p>
           </div>
         </div>
-      `,error:t=>(console.error(`Error fetching product ${this.productUrl}\n${t}`),B`<span class="error">${t}</span>`)})}renderImage(t){return B`<img
+      `,error:t=>(console.error(`Error fetching product "${this.productUrl}"\n${t}`),B`<span class="error">${t}</span>`)})}renderImage(t){return B`<img
       width="${this.imageWidth}"
       height="${this.imageHeight}"
       src="${t.image.src}&width=${this.imageWidth}&height=${this.imageHeight}&crop=center"
@@ -61,7 +61,7 @@ const ht=Symbol.for(""),ot=t=>{if(t?.r===ht)return t?._$litStatic$},nt=new Map,c
       border-radius: 8px;
       padding: 16px;
       font-family: Sans-serif;
-      height: 260px;
+      height: 280px;
       width: 460px;
     }
 
